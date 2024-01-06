@@ -24,5 +24,24 @@ int main(){
     cout<<"\t 17: Calculate an Expression"<<endl;
     cout<<"\t 18. Matrix Operations"<<endl;
     cout<<"\t 19. Vector Operations"<<endl;
+
+     float x,y;
+    float PI= 3.14159265;
+    int choice;
+
+    do{
+        cout<<"\n\t **Press the keynumber to select your operation**\n\t";
+        cin>>choice;
+
+        if(choice==17){
+            string infixExpr;
+                cout<<"\tEnter a one-digit infix expression: ";
+                cin>>infixExpr;
+
+                string postfixExpr= infixToPostfix(infixExpr);
+                int result = evaluatePostfix(postfixExpr);
+                cout<<"\tResult: "<<result<<endl;
+                break;
+        }
 return 0;
 }
