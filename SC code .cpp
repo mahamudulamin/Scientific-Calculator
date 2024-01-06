@@ -5,6 +5,21 @@
 #include<stack>
 using namespace std;
 
+int getPrecedence(char op) {
+    switch (op) {
+        case '+':
+        case '-':
+            return 1;
+        case '*':
+        case '/':
+            return 2;
+        case '^':
+            return 3;
+        default:
+            return 0;
+    }
+}
+
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t           CALCULATOR            "<<endl;
