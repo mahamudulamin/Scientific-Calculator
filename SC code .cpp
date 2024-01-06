@@ -108,6 +108,61 @@ vector <vector <int> > matrix_input(char a){
     return v;
 }
 
+void matrix_mul() {
+    int m1[10][10], m2[10][10], result[10][10];
+    int r1, c1, r2, c2;
+
+    cout << "\n\tEnter rows and columns for first matrix: \n\t";
+    cin >> r1 >> c1;
+
+    cout << "\tEnter rows and columns for second matrix: \n\t";
+    cin >> r2 >> c2;
+
+    while (c1 != r2) {
+        cout << "\tError! Columns of first matrix not equal to rows of second.\n";
+        cout << "\tEnter rows and columns for first matrix:\n\t ";
+        cin >> r1 >> c1;
+        cout << "\tEnter rows and columns for second matrix: \n\t";
+        cin >> r2 >> c2;
+    }
+
+    cout << "\tEnter elements of first matrix:\n";
+    for(int i = 0; i < r1; ++i) {
+        for(int j = 0; j < c1; ++j) {
+            std::cin >> m1[i][j];
+        }
+    }
+
+    cout << "\tEnter elements of second matrix:\n";
+    for(int i = 0; i < r2; ++i) {
+        for(int j = 0; j < c2; ++j) {
+            cin >> m2[i][j];
+        }
+    }
+
+    for(int i = 0; i < r1; ++i) {
+        for(int j = 0; j < c2; ++j) {
+            result[i][j] = 0;
+        }
+    }
+
+    for(int i =0; i < r1; ++i) {
+        for(int j =0; j < c2; ++j) {
+            for(int k =0; k < c1; ++k) {
+                result[i][j] += m1[i][k] * m2[k][j];
+            }
+        }
+    }
+
+    cout << "\tResultant matrix:\n\t";
+    for(int i =0; i <r1; ++i) {
+        for(int j =0; j<c2; ++j) {
+            cout <<result[i][j] << " ";
+        }
+        cout<<"\n\t";
+    }
+}
+
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t           CALCULATOR            "<<endl;
