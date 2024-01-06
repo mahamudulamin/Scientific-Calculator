@@ -49,6 +49,41 @@ string infixToPostfix(const string& expr) {
         return postfix;
     }
 
+int evaluatePostfix(const string& expr) {
+    stack<int> st;
+
+    for (char ch : expr) {
+        if (isdigit(ch)) {
+            st.push(ch - '0');
+        } else {
+            int operand2 = st.top();
+            st.pop();
+            int operand1 = st.top();
+            st.pop();
+
+            switch (ch) {
+                case '+':
+                    st.push(operand1 + operand2);
+                    break;
+                case '-':
+                    st.push(operand1 - operand2);
+                    break;
+                case '*':
+                    st.push(operand1 * operand2);
+                    break;
+                case '/':
+                    st.push(operand1 / operand2);
+                    break;
+                case '^':
+                    st.push(pow(operand1, operand2));
+                default:
+                    break;
+            }
+        }
+    }
+    return st.top();
+}
+
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t           CALCULATOR            "<<endl;
