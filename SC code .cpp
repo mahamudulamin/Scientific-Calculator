@@ -26,6 +26,18 @@ vector<int> Addition(const vector<int>& vec1, const vector<int>& vec2)
     return result;
 }
 
+vector<int> Subtraction(const vector<int>& vec1, const vector<int>& vec2)
+ {
+    int size = min(vec1.size(), vec2.size());
+    vector<int> result(size);
+
+    for (int i = 0; i < size; ++i)
+    {
+        result[i] = vec1[i] - vec2[i];
+    }
+    return result;
+}
+
 int getPrecedence(char op) {
     switch (op) {
         case '+':
