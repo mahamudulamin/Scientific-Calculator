@@ -1,4 +1,12 @@
-cout<<"\n\t-------------------------------"<<endl;
+#include<iostream>
+#include<math.h>
+#include<vector>
+#include<string>
+#include<stack>
+using namespace std;
+
+int main(){
+    cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t           CALCULATOR            "<<endl;
     cout<<"\t-------------------------------"<<endl;
 
@@ -16,3 +24,5 @@ cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t 17: Calculate an Expression"<<endl;
     cout<<"\t 18. Matrix Operations"<<endl;
     cout<<"\t 19. Vector Operations"<<endl;
+return 0;
+}
