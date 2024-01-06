@@ -5,6 +5,16 @@
 #include<stack>
 using namespace std;
 
+void display(const vector<int>& vec)
+ {
+    cout << "\tVector: [ ";
+    for (int i = 0; i < vec.size(); ++i)
+    {
+        cout << vec[i] << " ";
+    }
+    cout << "]" << endl;
+}
+
 int getPrecedence(char op) {
     switch (op) {
         case '+':
