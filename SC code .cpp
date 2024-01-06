@@ -163,6 +163,52 @@ void matrix_mul() {
     }
 }
 
+void matrix(){
+    cout<<"\n\t **Choose Keyword for Matrix Operation**\n\n";
+    cout<<"\t1. Matrix Addition\n";
+    cout<<"\t2. Matrix Subtraction\n";
+    cout<<"\t3. Matrix Multiplication\n";
+
+    int option;
+    cin>>option;
+
+    char ch1='A';
+    char ch2='B';
+
+    if(option==3){
+        matrix_mul();
+    }
+
+    else if(option==2){
+            vector<vector <int> > v1,v2;
+            v1=matrix_input(ch1);
+            v2=matrix_input(ch2);
+            cout<<"\n\tFinal Matrix:\n\t";
+
+            for(int i=0;i<v1.size();i++){
+                for(int j=0;j<v1[i].size();j++){
+                cout<<v1[i][j] - v2[i][j]<<" ";
+                }
+            cout<<"\n\t";
+            }
+    }
+   else if(option==1){
+            vector<vector <int> > v1,v2;
+            v1=matrix_input(ch1);
+            v2=matrix_input(ch2);
+            cout<<"\n\tFinal Matrix:\n\t";
+
+            for(int i=0;i<v1.size();i++){
+                for(int j=0;j<v1[i].size();j++){
+                cout<<v1[i][j] + v2[i][j]<<" ";
+                }
+            cout<<"\n\t";
+            }
+    }
+    else{
+        cout<<"\tWrong Input"<<endl;
+    }
+
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t           CALCULATOR            "<<endl;
