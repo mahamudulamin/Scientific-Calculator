@@ -50,6 +50,20 @@ int dotProduct(const vector<int>& vec1, const vector<int>& vec2)
     return result;
 }
 
+vector<int> crossProduct(const vector<int>& vec1, const vector<int>& vec2)
+ {
+    if (vec1.size() < 3 || vec2.size() < 3)
+    {
+        cout << "\tCross product is:" << endl;
+        return {};
+    }
+
+    vector<int> result(3);
+    result[0] = vec1[1] * vec2[2] - vec1[2] * vec2[1];
+    result[1] = vec1[2] * vec2[0] - vec1[0] * vec2[2];
+    result[2] = vec1[0] * vec2[1] - vec1[1] * vec2[0];
+    return result;
+}
 
 int getPrecedence(char op) {
     switch (op) {
