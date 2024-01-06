@@ -65,6 +65,93 @@ vector<int> crossProduct(const vector<int>& vec1, const vector<int>& vec2)
     return result;
 }
 
+void Vector(){
+    int t;
+    cout << "\tEnter the size of vectors: \n";
+    cin >> t;
+
+    vector<int> vector1, vector2;
+
+    cout << "\tEnter elements for vector 1: \n";
+    int val;
+    for (int i = 0; i < t; ++i)
+    {
+        cin >> val;
+        vector1.push_back(val);
+    }
+
+    cout << "\tEnter elements for vector 2: \n";
+    for (int i = 0; i < t; ++i)
+    {
+        cin >> val;
+        vector2.push_back(val);
+    }
+
+    cout << "\tVector 1: \n";
+    display(vector1);
+    cout << "\tVector 2: \n";
+    display(vector2);
+
+    cout << "\t1. Addition" << endl;
+    cout << "\t2. Subtraction" << endl;
+    cout << "\t3. Dot Product" << endl;
+    cout << "\t4. Cross Product" << endl;
+    int choice;
+    cout << "\tEnter your choice: "<<endl;
+    cin >> choice;
+
+    switch (choice)
+     {
+        case 1:
+            if (vector1.size() != vector2.size())
+            {
+                cout << "\tError:Size doesn't match!" << endl;
+            }
+            else
+            {
+                vector<int> result = Addition(vector1, vector2);
+                cout << "Addition Result: ";
+                display(result);
+            }
+            break;
+        case 2:
+            if (vector1.size() != vector2.size()) {
+                cout << "\tError:Size doesn't match!" << endl;
+            } else {
+                vector<int> result = Subtraction(vector1, vector2);
+                cout << "\tSubtraction Result: \n";
+                display(result);
+            }
+            break;
+        case 3:
+            if (vector1.size() != vector2.size())
+            {
+                cout << "\tError: Size doesn't match!" << endl;
+            }
+            else
+            {
+                cout << "\tDot Product: " << dotProduct(vector1, vector2) << endl;
+            }
+            break;
+        case 4:
+            if (vector1.size() != 3 || vector2.size() != 3)
+            {
+                cout << "\tError: Size doesn't match!" << endl;
+            }
+            else
+            {
+                vector<int> result = crossProduct(vector1, vector2);
+                cout << "\tCross Product: ";
+                display(result);
+            }
+            break;
+        default:
+            cout << "\tInvalid choice!" << endl;
+            break;
+    }
+}
+
+
 int getPrecedence(char op) {
     switch (op) {
         case '+':
