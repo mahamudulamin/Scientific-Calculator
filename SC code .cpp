@@ -38,6 +38,19 @@ vector<int> Subtraction(const vector<int>& vec1, const vector<int>& vec2)
     return result;
 }
 
+int dotProduct(const vector<int>& vec1, const vector<int>& vec2)
+ {
+    int size = min(vec1.size(), vec2.size());
+    int result = 0.0;
+
+    for (int i = 0; i < size; ++i)
+    {
+        result += vec1[i] * vec2[i];
+    }
+    return result;
+}
+
+
 int getPrecedence(char op) {
     switch (op) {
         case '+':
