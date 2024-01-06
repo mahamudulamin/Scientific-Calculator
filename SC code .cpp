@@ -105,5 +105,44 @@ int main(){
                 cin>>x;
                 cout<<"\tResult = "<<sqrt(x)<<endl;
                 break;
+            
+        case 9: cout<<"\tEnter Degree angle\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<sin(x*(PI/180.0))<<endl;
+                break;
+
+        case 10: cout<<"\tEnter Degree Angle\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<cos(x*(PI/180.0))<<endl;
+                break;
+
+        case 11: cout<<"\tEnter Degree Angle\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<tan(x*(PI/180.0))<<endl;
+                break;
+
+        case 12: cout<<"\tEnter Value\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<asin(x)*180.0/PI<<endl;
+                break;
+
+        case 13: cout<<"\tEnter Value\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<acos(x)*180.0/PI<<endl;
+                break;
+
+        case 14: cout<<"\tEnter Value\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<atan(x)*180.0/PI<<endl;
+                break;
+
+        case 15: cout<<"\tEnter Number\n\t";
+                signed long long p,sum=1;
+                cin>>p;
+                for(int i=1; i<=p; i++){
+                    sum=i*sum;
+                }
+                cout<<"\tResult = "<<sum<<endl;
+                break;
 return 0;
 }
