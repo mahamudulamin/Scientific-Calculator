@@ -208,6 +208,7 @@ void matrix(){
     else{
         cout<<"\tWrong Input"<<endl;
     }
+}
 
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
