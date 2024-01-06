@@ -84,6 +84,30 @@ int evaluatePostfix(const string& expr) {
     return st.top();
 }
 
+vector <vector <int> > matrix_input(char a){
+    int n,m;
+    cout<<"\n\tEnter the The Dimension of Matrix"<<a;
+    cout<<"\n\tHow Many rows?\n\t";
+    cin>>n;
+    cout<<"\n\tHow Many columns?\n\t";
+    cin>>m;
+
+    vector < vector <int> > v;
+    for(int i=1;i<=n;i++)
+    {
+        vector <int> tmp_v;
+        for(int j=1;j<=m;j++)
+        {
+            int x;
+            cout<<"\t"<<a<<i<<j<<" = ";
+            cin>>x;
+            tmp_v.push_back(x);
+        }
+        v.push_back(tmp_v);
+    }
+    return v;
+}
+
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
     cout<<"\t           CALCULATOR            "<<endl;
