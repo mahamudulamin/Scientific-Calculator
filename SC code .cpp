@@ -19,6 +19,29 @@ int getPrecedence(char op) {
             return 0;
     }
 }
+string infixToPostfix(const string& expr) {
+    string postfix = "";
+    stack<char> st;
+
+    for (char ch : expr) {
+        if (isdigit(ch)) {
+            postfix += ch;
+        } else if (ch == '(') {
+            st.push(ch);
+        } else if (ch == ')') {
+            while (!st.empty() && st.top() != '(') {
+                postfix += st.top();
+                st.pop();
+            }
+            st.pop();
+        } else {
+            while (!st.empty() && getPrecedence(st.top()) >= getPrecedence(ch)) {
+                postfix += st.top();
+                st.pop();
+            }
+            st.push(ch);
+        }
+    }
 
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
