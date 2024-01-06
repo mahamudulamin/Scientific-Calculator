@@ -43,5 +43,17 @@ int main(){
                 cout<<"\tResult: "<<result<<endl;
                 break;
         }
+        switch(choice){
+
+        default: cout<<"\tWrong Input"<<endl;
+                break;
+
+        case 18: matrix();
+                    break;
+        case 19:Vector();
+                    break;
+
+        case 16: cout<<"\tExited"<<endl;
+                break;
 return 0;
 }
