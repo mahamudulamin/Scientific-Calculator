@@ -144,5 +144,7 @@ int main(){
                 }
                 cout<<"\tResult = "<<sum<<endl;
                 break;
+            }
+    } while(choice!=16);
 return 0;
 }
