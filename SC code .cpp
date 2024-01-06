@@ -42,6 +42,12 @@ string infixToPostfix(const string& expr) {
             st.push(ch);
         }
     }
+    while (!st.empty()) {
+            postfix += st.top();
+            st.pop();
+        }
+        return postfix;
+    }
 
 int main(){
     cout<<"\n\t-------------------------------"<<endl;
