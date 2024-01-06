@@ -55,5 +55,55 @@ int main(){
 
         case 16: cout<<"\tExited"<<endl;
                 break;
+            
+         case 1: cout<<"\tEnter 1st Operand\n\t";
+                cin>>x;
+                cout<<"\tEnter 2nd Operand\n\t";
+                cin>>y;
+                cout<<"\tResult = "<<x+y<<endl;
+                break;
+
+        case 2: cout<<"\tEnter 1st Operand\n\t";
+                cin>>x;
+                cout<<"\tEnter 2st Operand\n\t";
+                cin>>y;
+                cout<<"\tResult = "<<x-y<<endl;
+                break;
+
+        case 3: cout<<"\tEnter 1st Operand\n\t";
+                cin>>x;
+                cout<<"\tEnter 2nd Operand\n\t";
+                cin>>y;
+                cout<<"\tResult = "<<x*y<<endl;
+                break;
+
+        case 4: cout<<"\tEnter 1st Operand\n\t";
+                cin>>x;
+                cout<<"\tEnter 2nd Operand\n\t";
+                cin>>y;
+                cout<<"\tResult = "<<x/y<<endl;
+                break;
+
+        case 5: cout<<"\tEnter Base \n\t";
+                cin>>x;
+                cout<<"\tEnter Exponent\n\t";
+                cin>>y;
+                cout<<"\tResult = "<<pow(x,y)<<endl;
+                break;
+
+        case 6: cout<<"\tEnter Number\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<log10(x)<<endl;
+                break;
+
+        case 7: cout<<"\tEnter Number\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<x*x<<endl;
+                break;
+
+        case 8: cout<<"\tEnter Number\n\t";
+                cin>>x;
+                cout<<"\tResult = "<<sqrt(x)<<endl;
+                break;
 return 0;
 }
